@@ -24,6 +24,7 @@ namespace PackConverter
         private void homebtn_Click(object sender, EventArgs e)
         {
             homepnl.Visible = true;
+            settingspnl.Visible = false;
 
             homebtn.Checked = true;
             changelogbtn.Checked = false;
@@ -57,6 +58,9 @@ namespace PackConverter
 
         private void settingsbtn_Click(object sender, EventArgs e)
         {
+            homepnl.Visible = false;
+            settingspnl.Visible = true;
+
             settingsbtn.Checked = true;
             homebtn.Checked = false;
             changelogbtn.Checked = false;
@@ -89,6 +93,23 @@ namespace PackConverter
         private void launchMCbtn_Click(object sender, EventArgs e)
         {
             Process.Start("Minecraft://");
+        }
+
+        private void convertbtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("");
+        }
+
+        private void expbtn_Click(object sender, EventArgs e)
+        {
+            expbtn.Checked = true;
+            stablebtn.Checked = false;
+        }
+
+        private void stabelbtn_Click(object sender, EventArgs e)
+        {
+            stablebtn.Checked = true;
+            expbtn.Checked = false;
         }
     }
 }

@@ -32,23 +32,28 @@ namespace PackConverter
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.minibtn = new Guna.UI2.WinForms.Guna2Button();
+            this.closebtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.homebtn = new Guna.UI2.WinForms.Guna2Button();
             this.settingsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.changelogbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.closebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.minibtn = new Guna.UI2.WinForms.Guna2Button();
             this.navpnl = new Guna.UI2.WinForms.Guna2Panel();
             this.homepnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.convertbtn = new Guna.UI2.WinForms.Guna2Button();
             this.launchMCbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.convertbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.settingspnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.expbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.stablebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.navpnl.SuspendLayout();
             this.homepnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.settingspnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -69,6 +74,65 @@ namespace PackConverter
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(895, 106);
             this.guna2ShadowPanel1.TabIndex = 0;
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.BackgroundImage")));
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Empty;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, -10);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(110, 118);
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // minibtn
+            // 
+            this.minibtn.Animated = true;
+            this.minibtn.CheckedState.Parent = this.minibtn;
+            this.minibtn.CustomImages.Parent = this.minibtn;
+            this.minibtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.minibtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.minibtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.minibtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.minibtn.DisabledState.Parent = this.minibtn;
+            this.minibtn.FillColor = System.Drawing.Color.Transparent;
+            this.minibtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.minibtn.ForeColor = System.Drawing.Color.White;
+            this.minibtn.HoverState.Parent = this.minibtn;
+            this.minibtn.Location = new System.Drawing.Point(831, 3);
+            this.minibtn.Name = "minibtn";
+            this.minibtn.ShadowDecoration.Parent = this.minibtn;
+            this.minibtn.Size = new System.Drawing.Size(30, 30);
+            this.minibtn.TabIndex = 5;
+            this.minibtn.Text = "-";
+            this.minibtn.Click += new System.EventHandler(this.minibtn_Click);
+            // 
+            // closebtn
+            // 
+            this.closebtn.Animated = true;
+            this.closebtn.CheckedState.Parent = this.closebtn;
+            this.closebtn.CustomImages.Parent = this.closebtn;
+            this.closebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closebtn.DisabledState.Parent = this.closebtn;
+            this.closebtn.FillColor = System.Drawing.Color.Transparent;
+            this.closebtn.FocusedColor = System.Drawing.Color.Transparent;
+            this.closebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.closebtn.ForeColor = System.Drawing.Color.White;
+            this.closebtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.closebtn.HoverState.Parent = this.closebtn;
+            this.closebtn.Location = new System.Drawing.Point(858, 3);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.ShadowDecoration.Parent = this.closebtn;
+            this.closebtn.Size = new System.Drawing.Size(30, 30);
+            this.closebtn.TabIndex = 4;
+            this.closebtn.Text = "X";
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -79,6 +143,18 @@ namespace PackConverter
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(254, 68);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Converter";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 15);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 68);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "Turtle";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // homebtn
             // 
@@ -168,52 +244,6 @@ namespace PackConverter
             this.changelogbtn.Text = "Changelog";
             this.changelogbtn.Click += new System.EventHandler(this.changelogbtn_Click);
             // 
-            // closebtn
-            // 
-            this.closebtn.Animated = true;
-            this.closebtn.CheckedState.Parent = this.closebtn;
-            this.closebtn.CustomImages.Parent = this.closebtn;
-            this.closebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closebtn.DisabledState.Parent = this.closebtn;
-            this.closebtn.FillColor = System.Drawing.Color.Transparent;
-            this.closebtn.FocusedColor = System.Drawing.Color.Transparent;
-            this.closebtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.closebtn.ForeColor = System.Drawing.Color.White;
-            this.closebtn.HoverState.FillColor = System.Drawing.Color.Red;
-            this.closebtn.HoverState.Parent = this.closebtn;
-            this.closebtn.Location = new System.Drawing.Point(858, 3);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.ShadowDecoration.Parent = this.closebtn;
-            this.closebtn.Size = new System.Drawing.Size(30, 30);
-            this.closebtn.TabIndex = 4;
-            this.closebtn.Text = "X";
-            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
-            // 
-            // minibtn
-            // 
-            this.minibtn.Animated = true;
-            this.minibtn.CheckedState.Parent = this.minibtn;
-            this.minibtn.CustomImages.Parent = this.minibtn;
-            this.minibtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.minibtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.minibtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.minibtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.minibtn.DisabledState.Parent = this.minibtn;
-            this.minibtn.FillColor = System.Drawing.Color.Transparent;
-            this.minibtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.minibtn.ForeColor = System.Drawing.Color.White;
-            this.minibtn.HoverState.Parent = this.minibtn;
-            this.minibtn.Location = new System.Drawing.Point(831, 3);
-            this.minibtn.Name = "minibtn";
-            this.minibtn.ShadowDecoration.Parent = this.minibtn;
-            this.minibtn.Size = new System.Drawing.Size(30, 30);
-            this.minibtn.TabIndex = 5;
-            this.minibtn.Text = "-";
-            this.minibtn.Click += new System.EventHandler(this.minibtn_Click);
-            // 
             // navpnl
             // 
             this.navpnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -236,41 +266,6 @@ namespace PackConverter
             this.homepnl.ShadowDecoration.Parent = this.homepnl;
             this.homepnl.Size = new System.Drawing.Size(622, 327);
             this.homepnl.TabIndex = 5;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 1050;
-            this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
-            this.guna2BorderlessForm1.BorderRadius = 20;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            // 
-            // convertbtn
-            // 
-            this.convertbtn.Animated = true;
-            this.convertbtn.BackColor = System.Drawing.Color.Transparent;
-            this.convertbtn.BorderColor = System.Drawing.Color.White;
-            this.convertbtn.BorderRadius = 2;
-            this.convertbtn.BorderThickness = 1;
-            this.convertbtn.CheckedState.Parent = this.convertbtn;
-            this.convertbtn.CustomImages.Parent = this.convertbtn;
-            this.convertbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.convertbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.convertbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.convertbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.convertbtn.DisabledState.Parent = this.convertbtn;
-            this.convertbtn.FillColor = System.Drawing.Color.Empty;
-            this.convertbtn.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.convertbtn.ForeColor = System.Drawing.Color.White;
-            this.convertbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.convertbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.convertbtn.HoverState.Parent = this.convertbtn;
-            this.convertbtn.Location = new System.Drawing.Point(214, 258);
-            this.convertbtn.Name = "convertbtn";
-            this.convertbtn.ShadowDecoration.Parent = this.convertbtn;
-            this.convertbtn.Size = new System.Drawing.Size(180, 57);
-            this.convertbtn.TabIndex = 0;
-            this.convertbtn.Text = "Convert";
             // 
             // launchMCbtn
             // 
@@ -300,30 +295,119 @@ namespace PackConverter
             this.launchMCbtn.Text = "Launch MC";
             this.launchMCbtn.Click += new System.EventHandler(this.launchMCbtn_Click);
             // 
-            // guna2PictureBox1
+            // convertbtn
             // 
-            this.guna2PictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.BackgroundImage")));
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Empty;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, -10);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(110, 118);
-            this.guna2PictureBox1.TabIndex = 6;
-            this.guna2PictureBox1.TabStop = false;
+            this.convertbtn.Animated = true;
+            this.convertbtn.BackColor = System.Drawing.Color.Transparent;
+            this.convertbtn.BorderColor = System.Drawing.Color.White;
+            this.convertbtn.BorderRadius = 2;
+            this.convertbtn.BorderThickness = 1;
+            this.convertbtn.CheckedState.Parent = this.convertbtn;
+            this.convertbtn.CustomImages.Parent = this.convertbtn;
+            this.convertbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.convertbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.convertbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.convertbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.convertbtn.DisabledState.Parent = this.convertbtn;
+            this.convertbtn.FillColor = System.Drawing.Color.Empty;
+            this.convertbtn.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertbtn.ForeColor = System.Drawing.Color.White;
+            this.convertbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.convertbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.convertbtn.HoverState.Parent = this.convertbtn;
+            this.convertbtn.Location = new System.Drawing.Point(214, 258);
+            this.convertbtn.Name = "convertbtn";
+            this.convertbtn.ShadowDecoration.Parent = this.convertbtn;
+            this.convertbtn.Size = new System.Drawing.Size(180, 57);
+            this.convertbtn.TabIndex = 0;
+            this.convertbtn.Text = "Convert";
+            this.convertbtn.Click += new System.EventHandler(this.convertbtn_Click);
             // 
-            // guna2HtmlLabel1
+            // guna2BorderlessForm1
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 15);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 68);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Turtle";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 1050;
+            this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
+            this.guna2BorderlessForm1.BorderRadius = 20;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            // 
+            // settingspnl
+            // 
+            this.settingspnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.settingspnl.Controls.Add(this.guna2HtmlLabel3);
+            this.settingspnl.Controls.Add(this.stablebtn);
+            this.settingspnl.Controls.Add(this.expbtn);
+            this.settingspnl.Location = new System.Drawing.Point(238, 119);
+            this.settingspnl.Name = "settingspnl";
+            this.settingspnl.ShadowDecoration.Parent = this.settingspnl;
+            this.settingspnl.Size = new System.Drawing.Size(622, 327);
+            this.settingspnl.TabIndex = 6;
+            // 
+            // expbtn
+            // 
+            this.expbtn.Animated = true;
+            this.expbtn.BackColor = System.Drawing.Color.Transparent;
+            this.expbtn.BorderColor = System.Drawing.Color.White;
+            this.expbtn.BorderRadius = 2;
+            this.expbtn.BorderThickness = 1;
+            this.expbtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.expbtn.CheckedState.Parent = this.expbtn;
+            this.expbtn.CustomImages.Parent = this.expbtn;
+            this.expbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.expbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.expbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.expbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.expbtn.DisabledState.Parent = this.expbtn;
+            this.expbtn.FillColor = System.Drawing.Color.Transparent;
+            this.expbtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expbtn.ForeColor = System.Drawing.Color.White;
+            this.expbtn.HoverState.Parent = this.expbtn;
+            this.expbtn.Location = new System.Drawing.Point(424, 69);
+            this.expbtn.Name = "expbtn";
+            this.expbtn.ShadowDecoration.Parent = this.expbtn;
+            this.expbtn.Size = new System.Drawing.Size(180, 55);
+            this.expbtn.TabIndex = 0;
+            this.expbtn.Text = "Experimental Branch";
+            this.expbtn.Click += new System.EventHandler(this.expbtn_Click);
+            // 
+            // stablebtn
+            // 
+            this.stablebtn.Animated = true;
+            this.stablebtn.BackColor = System.Drawing.Color.Transparent;
+            this.stablebtn.BorderColor = System.Drawing.Color.White;
+            this.stablebtn.BorderRadius = 2;
+            this.stablebtn.BorderThickness = 1;
+            this.stablebtn.Checked = true;
+            this.stablebtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.stablebtn.CheckedState.Parent = this.stablebtn;
+            this.stablebtn.CustomImages.Parent = this.stablebtn;
+            this.stablebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.stablebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.stablebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.stablebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.stablebtn.DisabledState.Parent = this.stablebtn;
+            this.stablebtn.FillColor = System.Drawing.Color.Transparent;
+            this.stablebtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stablebtn.ForeColor = System.Drawing.Color.White;
+            this.stablebtn.HoverState.Parent = this.stablebtn;
+            this.stablebtn.Location = new System.Drawing.Point(424, 130);
+            this.stablebtn.Name = "stablebtn";
+            this.stablebtn.ShadowDecoration.Parent = this.stablebtn;
+            this.stablebtn.Size = new System.Drawing.Size(180, 55);
+            this.stablebtn.TabIndex = 1;
+            this.stablebtn.Text = "Stable Branch";
+            this.stablebtn.Click += new System.EventHandler(this.stabelbtn_Click);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(454, 21);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(113, 42);
+            this.guna2HtmlLabel3.TabIndex = 3;
+            this.guna2HtmlLabel3.Text = "Branch";
             // 
             // UI
             // 
@@ -332,9 +416,10 @@ namespace PackConverter
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(881, 468);
-            this.Controls.Add(this.homepnl);
             this.Controls.Add(this.navpnl);
             this.Controls.Add(this.guna2ShadowPanel1);
+            this.Controls.Add(this.homepnl);
+            this.Controls.Add(this.settingspnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UI";
@@ -343,9 +428,11 @@ namespace PackConverter
             this.Load += new System.EventHandler(this.UI_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.navpnl.ResumeLayout(false);
             this.homepnl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.settingspnl.ResumeLayout(false);
+            this.settingspnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,6 +453,10 @@ namespace PackConverter
         private Guna.UI2.WinForms.Guna2Button launchMCbtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Panel settingspnl;
+        private Guna.UI2.WinForms.Guna2Button expbtn;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button stablebtn;
     }
 }
 
