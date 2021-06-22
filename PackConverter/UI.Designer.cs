@@ -46,9 +46,9 @@ namespace PackConverter
             this.convertbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.settingspnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.expbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.stablebtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.stablebtn = new Guna.UI2.WinForms.Guna2Button();
+            this.expbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.navpnl.SuspendLayout();
@@ -136,22 +136,22 @@ namespace PackConverter
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Red Hat Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(285, 15);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(270, 15);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(254, 68);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(239, 66);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Converter";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Red Hat Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 15);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(152, 68);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(142, 66);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Turtle";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,7 +175,7 @@ namespace PackConverter
             this.homebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.homebtn.DisabledState.Parent = this.homebtn;
             this.homebtn.FillColor = System.Drawing.Color.Empty;
-            this.homebtn.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homebtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homebtn.ForeColor = System.Drawing.Color.White;
             this.homebtn.HoverState.Parent = this.homebtn;
             this.homebtn.Location = new System.Drawing.Point(29, 32);
@@ -204,7 +204,7 @@ namespace PackConverter
             this.settingsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.settingsbtn.DisabledState.Parent = this.settingsbtn;
             this.settingsbtn.FillColor = System.Drawing.Color.Empty;
-            this.settingsbtn.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsbtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsbtn.ForeColor = System.Drawing.Color.White;
             this.settingsbtn.HoverState.Parent = this.settingsbtn;
             this.settingsbtn.Location = new System.Drawing.Point(29, 69);
@@ -233,7 +233,7 @@ namespace PackConverter
             this.changelogbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.changelogbtn.DisabledState.Parent = this.changelogbtn;
             this.changelogbtn.FillColor = System.Drawing.Color.Empty;
-            this.changelogbtn.Font = new System.Drawing.Font("Montserrat SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changelogbtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changelogbtn.ForeColor = System.Drawing.Color.White;
             this.changelogbtn.HoverState.Parent = this.changelogbtn;
             this.changelogbtn.Location = new System.Drawing.Point(29, 106);
@@ -282,17 +282,17 @@ namespace PackConverter
             this.launchMCbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.launchMCbtn.DisabledState.Parent = this.launchMCbtn;
             this.launchMCbtn.FillColor = System.Drawing.Color.Empty;
-            this.launchMCbtn.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.launchMCbtn.Font = new System.Drawing.Font("Red Hat Display", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.launchMCbtn.ForeColor = System.Drawing.Color.White;
             this.launchMCbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
             this.launchMCbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
             this.launchMCbtn.HoverState.Parent = this.launchMCbtn;
-            this.launchMCbtn.Location = new System.Drawing.Point(17, 248);
+            this.launchMCbtn.Location = new System.Drawing.Point(17, 230);
             this.launchMCbtn.Name = "launchMCbtn";
             this.launchMCbtn.ShadowDecoration.Parent = this.launchMCbtn;
-            this.launchMCbtn.Size = new System.Drawing.Size(114, 67);
+            this.launchMCbtn.Size = new System.Drawing.Size(114, 85);
             this.launchMCbtn.TabIndex = 1;
-            this.launchMCbtn.Text = "Launch MC";
+            this.launchMCbtn.Text = "Import Pack to MC";
             this.launchMCbtn.Click += new System.EventHandler(this.launchMCbtn_Click);
             // 
             // convertbtn
@@ -310,7 +310,7 @@ namespace PackConverter
             this.convertbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.convertbtn.DisabledState.Parent = this.convertbtn;
             this.convertbtn.FillColor = System.Drawing.Color.Empty;
-            this.convertbtn.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.convertbtn.Font = new System.Drawing.Font("Red Hat Display", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.convertbtn.ForeColor = System.Drawing.Color.White;
             this.convertbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
             this.convertbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
@@ -343,32 +343,16 @@ namespace PackConverter
             this.settingspnl.Size = new System.Drawing.Size(622, 327);
             this.settingspnl.TabIndex = 6;
             // 
-            // expbtn
+            // guna2HtmlLabel3
             // 
-            this.expbtn.Animated = true;
-            this.expbtn.BackColor = System.Drawing.Color.Transparent;
-            this.expbtn.BorderColor = System.Drawing.Color.White;
-            this.expbtn.BorderRadius = 2;
-            this.expbtn.BorderThickness = 1;
-            this.expbtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.expbtn.CheckedState.Parent = this.expbtn;
-            this.expbtn.CustomImages.Parent = this.expbtn;
-            this.expbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.expbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.expbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.expbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.expbtn.DisabledState.Parent = this.expbtn;
-            this.expbtn.FillColor = System.Drawing.Color.Transparent;
-            this.expbtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expbtn.ForeColor = System.Drawing.Color.White;
-            this.expbtn.HoverState.Parent = this.expbtn;
-            this.expbtn.Location = new System.Drawing.Point(424, 69);
-            this.expbtn.Name = "expbtn";
-            this.expbtn.ShadowDecoration.Parent = this.expbtn;
-            this.expbtn.Size = new System.Drawing.Size(180, 55);
-            this.expbtn.TabIndex = 0;
-            this.expbtn.Text = "Experimental Branch";
-            this.expbtn.Click += new System.EventHandler(this.expbtn_Click);
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Red Hat Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(460, 21);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 41);
+            this.guna2HtmlLabel3.TabIndex = 3;
+            this.guna2HtmlLabel3.Text = "Branch";
             // 
             // stablebtn
             // 
@@ -387,7 +371,7 @@ namespace PackConverter
             this.stablebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.stablebtn.DisabledState.Parent = this.stablebtn;
             this.stablebtn.FillColor = System.Drawing.Color.Transparent;
-            this.stablebtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stablebtn.Font = new System.Drawing.Font("Red Hat Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stablebtn.ForeColor = System.Drawing.Color.White;
             this.stablebtn.HoverState.Parent = this.stablebtn;
             this.stablebtn.Location = new System.Drawing.Point(424, 130);
@@ -398,16 +382,32 @@ namespace PackConverter
             this.stablebtn.Text = "Stable Branch";
             this.stablebtn.Click += new System.EventHandler(this.stabelbtn_Click);
             // 
-            // guna2HtmlLabel3
+            // expbtn
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(454, 21);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(113, 42);
-            this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Branch";
+            this.expbtn.Animated = true;
+            this.expbtn.BackColor = System.Drawing.Color.Transparent;
+            this.expbtn.BorderColor = System.Drawing.Color.White;
+            this.expbtn.BorderRadius = 2;
+            this.expbtn.BorderThickness = 1;
+            this.expbtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
+            this.expbtn.CheckedState.Parent = this.expbtn;
+            this.expbtn.CustomImages.Parent = this.expbtn;
+            this.expbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.expbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.expbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.expbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.expbtn.DisabledState.Parent = this.expbtn;
+            this.expbtn.FillColor = System.Drawing.Color.Transparent;
+            this.expbtn.Font = new System.Drawing.Font("Red Hat Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expbtn.ForeColor = System.Drawing.Color.White;
+            this.expbtn.HoverState.Parent = this.expbtn;
+            this.expbtn.Location = new System.Drawing.Point(424, 69);
+            this.expbtn.Name = "expbtn";
+            this.expbtn.ShadowDecoration.Parent = this.expbtn;
+            this.expbtn.Size = new System.Drawing.Size(180, 55);
+            this.expbtn.TabIndex = 0;
+            this.expbtn.Text = "Experimental Branch";
+            this.expbtn.Click += new System.EventHandler(this.expbtn_Click);
             // 
             // UI
             // 

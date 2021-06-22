@@ -4,7 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +20,16 @@ namespace PackConverter
 {
     public partial class UI : Form
     {
+
         public UI()
         {
+            WebClient Converter = new WebClient();
             InitializeComponent();
+            Directory.CreateDirectory(@"c:\Turtle");
+            Directory.CreateDirectory(@"c:\Turtle/Converted_Packs");
+            Directory.CreateDirectory(@"c:\Turtle/Converter");
+
+            Converter.DownloadFile("https://github.com/ZKiev/TurtleFiles/blob/master/Converter.php", @"C:\Turtle/Converter/Converter.php");
         }
 
         private void homebtn_Click(object sender, EventArgs e)
@@ -92,7 +103,7 @@ namespace PackConverter
 
         private void launchMCbtn_Click(object sender, EventArgs e)
         {
-            Process.Start("Minecraft://");
+            Process.Start(@"C:\Turtle/Converted_Packs/");
         }
 
         private void convertbtn_Click(object sender, EventArgs e)
