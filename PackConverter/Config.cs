@@ -1,6 +1,6 @@
 namespace PackConverter;
 
-    public partial class Config
+    public class Config
 {
     public string from;
     public string to;
@@ -8,7 +8,7 @@ namespace PackConverter;
     public string zipPath;
 
     public Config (string from, string to, string javaVersion, string zipPath)
-
+       
         {
 
         this.from = from;

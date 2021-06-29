@@ -14,3 +14,4 @@ D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.C
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.CopyComplete
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.exe
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.pdb
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.AssemblyReference.cache

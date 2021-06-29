@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using DiscordRPC;
 using TurtleRPC;
 using Button = DiscordRPC.Button;
+using PackConverter.Config;
 
 namespace PackConverter
 {
@@ -129,6 +130,8 @@ namespace PackConverter
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.From = from.SelectedText;
+            
+            
         }
     }
 }
