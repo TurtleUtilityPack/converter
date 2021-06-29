@@ -41,18 +41,13 @@ namespace PackConverter
             this.settingsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.changelogbtn = new Guna.UI2.WinForms.Guna2Button();
             this.navpnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.homepnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.launchMCbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.convertbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.settingspnl = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.stablebtn = new Guna.UI2.WinForms.Guna2Button();
-            this.expbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.from = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.navpnl.SuspendLayout();
-            this.homepnl.SuspendLayout();
             this.settingspnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,25 +131,26 @@ namespace PackConverter
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Red Hat Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(270, 15);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(416, 15);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(239, 66);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(224, 57);
             this.guna2HtmlLabel2.TabIndex = 2;
             this.guna2HtmlLabel2.Text = "Converter";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Red Hat Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 15);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(259, 15);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(142, 66);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(131, 57);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Turtle";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // homebtn
             // 
@@ -175,7 +171,7 @@ namespace PackConverter
             this.homebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.homebtn.DisabledState.Parent = this.homebtn;
             this.homebtn.FillColor = System.Drawing.Color.Empty;
-            this.homebtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.homebtn.ForeColor = System.Drawing.Color.White;
             this.homebtn.HoverState.Parent = this.homebtn;
             this.homebtn.Location = new System.Drawing.Point(29, 32);
@@ -204,7 +200,7 @@ namespace PackConverter
             this.settingsbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.settingsbtn.DisabledState.Parent = this.settingsbtn;
             this.settingsbtn.FillColor = System.Drawing.Color.Empty;
-            this.settingsbtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsbtn.ForeColor = System.Drawing.Color.White;
             this.settingsbtn.HoverState.Parent = this.settingsbtn;
             this.settingsbtn.Location = new System.Drawing.Point(29, 69);
@@ -233,7 +229,7 @@ namespace PackConverter
             this.changelogbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.changelogbtn.DisabledState.Parent = this.changelogbtn;
             this.changelogbtn.FillColor = System.Drawing.Color.Empty;
-            this.changelogbtn.Font = new System.Drawing.Font("Red Hat Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changelogbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changelogbtn.ForeColor = System.Drawing.Color.White;
             this.changelogbtn.HoverState.Parent = this.changelogbtn;
             this.changelogbtn.Location = new System.Drawing.Point(29, 106);
@@ -250,78 +246,11 @@ namespace PackConverter
             this.navpnl.Controls.Add(this.changelogbtn);
             this.navpnl.Controls.Add(this.homebtn);
             this.navpnl.Controls.Add(this.settingsbtn);
-            this.navpnl.Location = new System.Drawing.Point(23, 119);
+            this.navpnl.Location = new System.Drawing.Point(23, 202);
             this.navpnl.Name = "navpnl";
             this.navpnl.ShadowDecoration.Parent = this.navpnl;
             this.navpnl.Size = new System.Drawing.Size(209, 165);
             this.navpnl.TabIndex = 4;
-            // 
-            // homepnl
-            // 
-            this.homepnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.homepnl.Controls.Add(this.launchMCbtn);
-            this.homepnl.Controls.Add(this.convertbtn);
-            this.homepnl.Location = new System.Drawing.Point(238, 119);
-            this.homepnl.Name = "homepnl";
-            this.homepnl.ShadowDecoration.Parent = this.homepnl;
-            this.homepnl.Size = new System.Drawing.Size(622, 327);
-            this.homepnl.TabIndex = 5;
-            // 
-            // launchMCbtn
-            // 
-            this.launchMCbtn.Animated = true;
-            this.launchMCbtn.BackColor = System.Drawing.Color.Transparent;
-            this.launchMCbtn.BorderColor = System.Drawing.Color.White;
-            this.launchMCbtn.BorderRadius = 2;
-            this.launchMCbtn.BorderThickness = 1;
-            this.launchMCbtn.CheckedState.Parent = this.launchMCbtn;
-            this.launchMCbtn.CustomImages.Parent = this.launchMCbtn;
-            this.launchMCbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.launchMCbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.launchMCbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.launchMCbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.launchMCbtn.DisabledState.Parent = this.launchMCbtn;
-            this.launchMCbtn.FillColor = System.Drawing.Color.Empty;
-            this.launchMCbtn.Font = new System.Drawing.Font("Red Hat Display", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.launchMCbtn.ForeColor = System.Drawing.Color.White;
-            this.launchMCbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.launchMCbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.launchMCbtn.HoverState.Parent = this.launchMCbtn;
-            this.launchMCbtn.Location = new System.Drawing.Point(17, 230);
-            this.launchMCbtn.Name = "launchMCbtn";
-            this.launchMCbtn.ShadowDecoration.Parent = this.launchMCbtn;
-            this.launchMCbtn.Size = new System.Drawing.Size(114, 85);
-            this.launchMCbtn.TabIndex = 1;
-            this.launchMCbtn.Text = "Import Pack to MC";
-            this.launchMCbtn.Click += new System.EventHandler(this.launchMCbtn_Click);
-            // 
-            // convertbtn
-            // 
-            this.convertbtn.Animated = true;
-            this.convertbtn.BackColor = System.Drawing.Color.Transparent;
-            this.convertbtn.BorderColor = System.Drawing.Color.White;
-            this.convertbtn.BorderRadius = 2;
-            this.convertbtn.BorderThickness = 1;
-            this.convertbtn.CheckedState.Parent = this.convertbtn;
-            this.convertbtn.CustomImages.Parent = this.convertbtn;
-            this.convertbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.convertbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.convertbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.convertbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.convertbtn.DisabledState.Parent = this.convertbtn;
-            this.convertbtn.FillColor = System.Drawing.Color.Empty;
-            this.convertbtn.Font = new System.Drawing.Font("Red Hat Display", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.convertbtn.ForeColor = System.Drawing.Color.White;
-            this.convertbtn.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.convertbtn.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.convertbtn.HoverState.Parent = this.convertbtn;
-            this.convertbtn.Location = new System.Drawing.Point(214, 258);
-            this.convertbtn.Name = "convertbtn";
-            this.convertbtn.ShadowDecoration.Parent = this.convertbtn;
-            this.convertbtn.Size = new System.Drawing.Size(180, 57);
-            this.convertbtn.TabIndex = 0;
-            this.convertbtn.Text = "Convert";
-            this.convertbtn.Click += new System.EventHandler(this.convertbtn_Click);
             // 
             // guna2BorderlessForm1
             // 
@@ -334,80 +263,70 @@ namespace PackConverter
             // settingspnl
             // 
             this.settingspnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.settingspnl.Controls.Add(this.guna2HtmlLabel3);
-            this.settingspnl.Controls.Add(this.stablebtn);
-            this.settingspnl.Controls.Add(this.expbtn);
+            this.settingspnl.Controls.Add(this.guna2Button1);
+            this.settingspnl.Controls.Add(this.from);
             this.settingspnl.Location = new System.Drawing.Point(238, 119);
             this.settingspnl.Name = "settingspnl";
             this.settingspnl.ShadowDecoration.Parent = this.settingspnl;
             this.settingspnl.Size = new System.Drawing.Size(622, 327);
             this.settingspnl.TabIndex = 6;
             // 
-            // guna2HtmlLabel3
+            // from
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Red Hat Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(460, 21);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(100, 41);
-            this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Branch";
+            this.from.AutoRoundedCorners = true;
+            this.from.BackColor = System.Drawing.Color.Transparent;
+            this.from.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.from.BorderRadius = 17;
+            this.from.BorderThickness = 0;
+            this.from.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.from.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.from.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.from.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.from.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.from.FocusedState.Parent = this.from;
+            this.from.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.from.ForeColor = System.Drawing.Color.Lime;
+            this.from.HoverState.Parent = this.from;
+            this.from.ItemHeight = 30;
+            this.from.Items.AddRange(new object[] {
+            "Bedrock",
+            "Java"});
+            this.from.ItemsAppearance.BackColor = System.Drawing.Color.Honeydew;
+            this.from.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.from.ItemsAppearance.Parent = this.from;
+            this.from.Location = new System.Drawing.Point(28, 115);
+            this.from.Name = "from";
+            this.from.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.from.ShadowDecoration.Parent = this.from;
+            this.from.Size = new System.Drawing.Size(140, 36);
+            this.from.TabIndex = 0;
+            this.from.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.from.SelectedIndexChanged += new System.EventHandler(this.from_SelectedIndexChanged);
             // 
-            // stablebtn
+            // guna2Button1
             // 
-            this.stablebtn.Animated = true;
-            this.stablebtn.BackColor = System.Drawing.Color.Transparent;
-            this.stablebtn.BorderColor = System.Drawing.Color.White;
-            this.stablebtn.BorderRadius = 2;
-            this.stablebtn.BorderThickness = 1;
-            this.stablebtn.Checked = true;
-            this.stablebtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.stablebtn.CheckedState.Parent = this.stablebtn;
-            this.stablebtn.CustomImages.Parent = this.stablebtn;
-            this.stablebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.stablebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.stablebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.stablebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.stablebtn.DisabledState.Parent = this.stablebtn;
-            this.stablebtn.FillColor = System.Drawing.Color.Transparent;
-            this.stablebtn.Font = new System.Drawing.Font("Red Hat Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stablebtn.ForeColor = System.Drawing.Color.White;
-            this.stablebtn.HoverState.Parent = this.stablebtn;
-            this.stablebtn.Location = new System.Drawing.Point(424, 130);
-            this.stablebtn.Name = "stablebtn";
-            this.stablebtn.ShadowDecoration.Parent = this.stablebtn;
-            this.stablebtn.Size = new System.Drawing.Size(180, 55);
-            this.stablebtn.TabIndex = 1;
-            this.stablebtn.Text = "Stable Branch";
-            this.stablebtn.Click += new System.EventHandler(this.stabelbtn_Click);
-            // 
-            // expbtn
-            // 
-            this.expbtn.Animated = true;
-            this.expbtn.BackColor = System.Drawing.Color.Transparent;
-            this.expbtn.BorderColor = System.Drawing.Color.White;
-            this.expbtn.BorderRadius = 2;
-            this.expbtn.BorderThickness = 1;
-            this.expbtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(188)))), ((int)(((byte)(73)))));
-            this.expbtn.CheckedState.Parent = this.expbtn;
-            this.expbtn.CustomImages.Parent = this.expbtn;
-            this.expbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.expbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.expbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.expbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.expbtn.DisabledState.Parent = this.expbtn;
-            this.expbtn.FillColor = System.Drawing.Color.Transparent;
-            this.expbtn.Font = new System.Drawing.Font("Red Hat Display", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expbtn.ForeColor = System.Drawing.Color.White;
-            this.expbtn.HoverState.Parent = this.expbtn;
-            this.expbtn.Location = new System.Drawing.Point(424, 69);
-            this.expbtn.Name = "expbtn";
-            this.expbtn.ShadowDecoration.Parent = this.expbtn;
-            this.expbtn.Size = new System.Drawing.Size(180, 55);
-            this.expbtn.TabIndex = 0;
-            this.expbtn.Text = "Experimental Branch";
-            this.expbtn.Click += new System.EventHandler(this.expbtn_Click);
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 18;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.MintCream;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(448, 285);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(167, 39);
+            this.guna2Button1.TabIndex = 1;
+            this.guna2Button1.Text = "Save ";
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // UI
             // 
@@ -418,7 +337,6 @@ namespace PackConverter
             this.ClientSize = new System.Drawing.Size(881, 468);
             this.Controls.Add(this.navpnl);
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Controls.Add(this.homepnl);
             this.Controls.Add(this.settingspnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -430,9 +348,7 @@ namespace PackConverter
             this.guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.navpnl.ResumeLayout(false);
-            this.homepnl.ResumeLayout(false);
             this.settingspnl.ResumeLayout(false);
-            this.settingspnl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -447,16 +363,12 @@ namespace PackConverter
         private Guna.UI2.WinForms.Guna2Button minibtn;
         private Guna.UI2.WinForms.Guna2Button closebtn;
         private Guna.UI2.WinForms.Guna2Panel navpnl;
-        private Guna.UI2.WinForms.Guna2Panel homepnl;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Button convertbtn;
-        private Guna.UI2.WinForms.Guna2Button launchMCbtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel settingspnl;
-        private Guna.UI2.WinForms.Guna2Button expbtn;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2Button stablebtn;
+        private Guna.UI2.WinForms.Guna2ComboBox from;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 

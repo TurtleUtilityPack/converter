@@ -21,6 +21,11 @@ namespace PackConverter
     public partial class UI : Form
     {
 
+        public string From;
+        public string To;
+        public string javaVersion;
+        public string zipPath;
+
         public UI()
         {
             WebClient Converter = new WebClient();
@@ -29,12 +34,12 @@ namespace PackConverter
             Directory.CreateDirectory(@"c:\Turtle/Converted_Packs");
             Directory.CreateDirectory(@"c:\Turtle/Converter");
 
-            Converter.DownloadFile("https://github.com/ZKiev/TurtleFiles/blob/master/Converter.php", @"C:\Turtle/Converter/Converter.php");
+            //Converter.DownloadFile("https://github.com/ZKiev/TurtleFiles/blob/master/Converter.php", @"C:\Turtle/Converter/Converter.php");
         }
 
         private void homebtn_Click(object sender, EventArgs e)
         {
-            homepnl.Visible = true;
+          
             settingspnl.Visible = false;
 
             homebtn.Checked = true;
@@ -69,7 +74,7 @@ namespace PackConverter
 
         private void settingsbtn_Click(object sender, EventArgs e)
         {
-            homepnl.Visible = false;
+           
             settingspnl.Visible = true;
 
             settingsbtn.Checked = true;
@@ -111,16 +116,19 @@ namespace PackConverter
             Process.Start("");
         }
 
-        private void expbtn_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
-            expbtn.Checked = true;
-            stablebtn.Checked = false;
+
         }
 
-        private void stabelbtn_Click(object sender, EventArgs e)
+        private void from_SelectedIndexChanged(object sender, EventArgs e)
         {
-            stablebtn.Checked = true;
-            expbtn.Checked = false;
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.From = from.SelectedText;
         }
     }
 }

@@ -1,0 +1,16 @@
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\PackConverter.exe.config
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\PackConverter.exe
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\PackConverter.pdb
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\DiscordRPC.dll
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\Guna.UI2.dll
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\Newtonsoft.Json.dll
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\DiscordRPC.pdb
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\DiscordRPC.xml
+D:\code\TurtleMine-MP\converter\PackConverter\bin\Release\Newtonsoft.Json.xml
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.UI.resources
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.Properties.Resources.resources
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.GenerateResource.cache
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.CoreCompileInputs.cache
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.csproj.CopyComplete
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.exe
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Release\PackConverter.pdb
