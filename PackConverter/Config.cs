@@ -21,5 +21,6 @@ namespace PackConverter;
     public compress()
     {
         json e = json.encode(this);
+        return e;
     }
 }
