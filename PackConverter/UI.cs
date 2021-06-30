@@ -13,6 +13,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordRPC;
+using DiscordRPC.Helper;
+using Newtonsoft.Json;
 using TurtleRPC;
 using Button = DiscordRPC.Button;
 using PackConverter.Config;
@@ -25,7 +27,7 @@ namespace PackConverter
         public string From;
         public string To;
         public string javaVersion;
-        public string zipPath;
+        public OpenFileDialog zipPath;
 
         public UI()
         {
@@ -129,9 +131,67 @@ namespace PackConverter
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.From = from.SelectedText;
-            
+            this.From = from.SelectedText.GetNullOrString();
+
+            string to;
+
+            switch (this.From)
+            {
+                case "Bedrock":
+                    to = "Java";
+                    break;
+
+                case "Java":
+                    to = "Bedrock";
+                    break;
+
+                default:
+                    to = "Bedrock";
+                    break;
+
+            }
+
+            var config = new Config(this.From, to);
             
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.zipPath = new OpenFileDialog();
+            this.zipPath.Title = "Select Zip File";
+            this.zipPath.Filter = "zip files (*.zip)|*.zip";
+            this.zipPath.DefaultExt = "zip";
+            this.zipPath.FilterIndex = 2;
+            this.zipPath.RestoreDirectory = true;
+            
+            
+
+
+        }
+    }
+}
+
+public class Config
+{
+    private string from;
+    private string to;
+    private string javaVersion;
+    private string zipPath;
+
+    public Config(string from, string to, string javaVersion, string zipPath)
+
+    {
+
+        this.from = from;
+        this.to = to;
+        this.javaVersion = javaVersion;
+        this.zipPath = zipPath;
+
+    }
+
+    public object compress()
+    {
+        object e = JsonConvert.SerializeObject(this);
+        return e;
     }
 }
