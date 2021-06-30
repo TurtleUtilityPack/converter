@@ -17,7 +17,7 @@ using DiscordRPC.Helper;
 using Newtonsoft.Json;
 using TurtleRPC;
 using Button = DiscordRPC.Button;
-using PackConverter.Config;
+using PackConverter;
 
 namespace PackConverter
 {
@@ -151,7 +151,7 @@ namespace PackConverter
 
             }
 
-            var config = new Config(this.From, to);
+            var config = new PackConverter.Config(this.From, to);
             
         }
 
@@ -163,35 +163,38 @@ namespace PackConverter
             this.zipPath.DefaultExt = "zip";
             this.zipPath.FilterIndex = 2;
             this.zipPath.RestoreDirectory = true;
-            
-            
+
+
 
 
         }
     }
 }
 
-public class Config
+namespace PackConverter
 {
-    private string from;
-    private string to;
-    private string javaVersion;
-    private string zipPath;
-
-    public Config(string from, string to, string javaVersion, string zipPath)
-
+    public class Config
     {
+        private string from;
+        private string to;
+        private string javaVersion;
+        private string zipPath;
 
-        this.from = from;
-        this.to = to;
-        this.javaVersion = javaVersion;
-        this.zipPath = zipPath;
+        public Config(string from, string to, string javaVersion, string zipPath)
 
-    }
+        {
 
-    public object compress()
-    {
-        object e = JsonConvert.SerializeObject(this);
-        return e;
+            this.from = from;
+            this.to = to;
+            this.javaVersion = javaVersion;
+            this.zipPath = zipPath;
+
+        }
+
+        public object compress()
+        {
+            object e = JsonConvert.SerializeObject(this);
+            return e;
+        }
     }
 }

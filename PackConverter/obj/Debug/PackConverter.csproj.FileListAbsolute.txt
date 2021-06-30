@@ -65,3 +65,4 @@ D:\code\TurtleMine-MP\converter\PackConverter\obj\Debug\PackConverter.csproj.Cor
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Debug\PackConverter.csproj.CopyComplete
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Debug\PackConverter.exe
 D:\code\TurtleMine-MP\converter\PackConverter\obj\Debug\PackConverter.pdb
+D:\code\TurtleMine-MP\converter\PackConverter\obj\Debug\PackConverter.csproj.AssemblyReference.cache
