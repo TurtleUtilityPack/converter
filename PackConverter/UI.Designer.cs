@@ -167,7 +167,7 @@ namespace PackConverter
             this.homebtn.BorderThickness = 1;
             this.homebtn.Checked = true;
             this.homebtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (70)))), ((int) (((byte) (188)))), ((int) (((byte) (73)))));
-            this.homebtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (20)))), ((int) (((byte) (20)))));
+            this.homebtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.homebtn.CheckedState.Parent = this.homebtn;
             this.homebtn.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.homebtn.CustomImages.Parent = this.homebtn;
@@ -182,6 +182,7 @@ namespace PackConverter
             this.homebtn.HoverState.Parent = this.homebtn;
             this.homebtn.Location = new System.Drawing.Point(29, 32);
             this.homebtn.Name = "homebtn";
+            this.homebtn.PressedColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.homebtn.ShadowDecoration.Parent = this.homebtn;
             this.homebtn.Size = new System.Drawing.Size(150, 31);
             this.homebtn.TabIndex = 1;
@@ -196,7 +197,7 @@ namespace PackConverter
             this.settingsbtn.BorderRadius = 3;
             this.settingsbtn.BorderThickness = 1;
             this.settingsbtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (70)))), ((int) (((byte) (188)))), ((int) (((byte) (73)))));
-            this.settingsbtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (20)))), ((int) (((byte) (20)))));
+            this.settingsbtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.settingsbtn.CheckedState.Parent = this.settingsbtn;
             this.settingsbtn.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.settingsbtn.CustomImages.Parent = this.settingsbtn;
@@ -211,6 +212,7 @@ namespace PackConverter
             this.settingsbtn.HoverState.Parent = this.settingsbtn;
             this.settingsbtn.Location = new System.Drawing.Point(29, 69);
             this.settingsbtn.Name = "settingsbtn";
+            this.settingsbtn.PressedColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.settingsbtn.ShadowDecoration.Parent = this.settingsbtn;
             this.settingsbtn.Size = new System.Drawing.Size(150, 31);
             this.settingsbtn.TabIndex = 2;
@@ -225,7 +227,7 @@ namespace PackConverter
             this.changelogbtn.BorderRadius = 3;
             this.changelogbtn.BorderThickness = 1;
             this.changelogbtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (70)))), ((int) (((byte) (188)))), ((int) (((byte) (73)))));
-            this.changelogbtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (20)))), ((int) (((byte) (20)))));
+            this.changelogbtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.changelogbtn.CheckedState.Parent = this.changelogbtn;
             this.changelogbtn.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.changelogbtn.CustomImages.Parent = this.changelogbtn;
@@ -240,6 +242,7 @@ namespace PackConverter
             this.changelogbtn.HoverState.Parent = this.changelogbtn;
             this.changelogbtn.Location = new System.Drawing.Point(29, 106);
             this.changelogbtn.Name = "changelogbtn";
+            this.changelogbtn.PressedColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.changelogbtn.ShadowDecoration.Parent = this.changelogbtn;
             this.changelogbtn.Size = new System.Drawing.Size(150, 31);
             this.changelogbtn.TabIndex = 3;
@@ -408,9 +411,8 @@ namespace PackConverter
             this.convertbtn.BorderColor = System.Drawing.Color.White;
             this.convertbtn.BorderRadius = 3;
             this.convertbtn.BorderThickness = 1;
-            this.convertbtn.Checked = true;
             this.convertbtn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (70)))), ((int) (((byte) (188)))), ((int) (((byte) (73)))));
-            this.convertbtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (20)))), ((int) (((byte) (20)))));
+            this.convertbtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.convertbtn.CheckedState.Parent = this.convertbtn;
             this.convertbtn.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.convertbtn.CustomImages.Parent = this.convertbtn;
@@ -425,6 +427,7 @@ namespace PackConverter
             this.convertbtn.HoverState.Parent = this.convertbtn;
             this.convertbtn.Location = new System.Drawing.Point(244, 271);
             this.convertbtn.Name = "convertbtn";
+            this.convertbtn.PressedColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.convertbtn.ShadowDecoration.Parent = this.convertbtn;
             this.convertbtn.Size = new System.Drawing.Size(150, 31);
             this.convertbtn.TabIndex = 4;
@@ -470,7 +473,6 @@ namespace PackConverter
 
         private Guna.UI2.WinForms.Guna2Button convertbtn;
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
 
         private Guna.UI2.WinForms.Guna2HtmlLabel homepnltxt;
 
