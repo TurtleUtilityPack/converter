@@ -59,10 +59,17 @@ namespace PackConverter
         {
 
             settingspnl.Visible = false;
+            homepnl.Visible = true;
 
             homebtn.Checked = true;
             changelogbtn.Checked = false;
             settingsbtn.Checked = false;
+
+
+            if(zipPath != null & From1 != null & To != null & JavaVersion != null & zipPath != null)
+            {
+                homepnltxt.Text = "Your current settings are set up.";
+            }
 
             Mods.Client.SetPresence(new RichPresence()
             {
@@ -94,13 +101,11 @@ namespace PackConverter
         {
 
             settingspnl.Visible = true;
+            homepnl.Visible = false;
 
             settingsbtn.Checked = true;
             homebtn.Checked = false;
             changelogbtn.Checked = false;
-
-            @from1.Text = "Bedrock";
-            @javaVersion.Text = "1.8";
 
             Mods.Client.SetPresence(new RichPresence()
             {
@@ -168,7 +173,7 @@ namespace PackConverter
 
             }
             
-            if (zipPath.FileName is null)
+            if (zipPath == null || zipPath.FileName.ToString() == null)
             {
                 MessageBox.Show("Error", "You didn't choose which file to convert!", MessageBoxButtons.OK);
             }
@@ -208,6 +213,12 @@ namespace PackConverter
         {
 
         }
+
+        private void homepnltxt_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+        
     }
          }
 
