@@ -44,9 +44,10 @@ namespace PackConverter
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.settingspnl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.javaVersion = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.@from = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.homepnl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.guna2PictureBox1)).BeginInit();
             this.navpnl.SuspendLayout();
@@ -265,11 +266,12 @@ namespace PackConverter
             // settingspnl
             // 
             this.settingspnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
+            this.settingspnl.Controls.Add(this.homepnl);
             this.settingspnl.Controls.Add(this.guna2Button2);
-            this.settingspnl.Controls.Add(this.guna2ComboBox1);
+            this.settingspnl.Controls.Add(this.javaVersion);
             this.settingspnl.Controls.Add(this.guna2Button1);
             this.settingspnl.Controls.Add(this.@from);
-            this.settingspnl.Location = new System.Drawing.Point(238, 119);
+            this.settingspnl.Location = new System.Drawing.Point(251, 162);
             this.settingspnl.Name = "settingspnl";
             this.settingspnl.ShadowDecoration.Parent = this.settingspnl;
             this.settingspnl.Size = new System.Drawing.Size(622, 327);
@@ -300,34 +302,34 @@ namespace PackConverter
             this.guna2Button2.UseTransparentBackground = true;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // guna2ComboBox1
+            // javaVersion
             // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.BorderThickness = 0;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Lime;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {"1.8", "1.8+"});
-            this.guna2ComboBox1.ItemsAppearance.BackColor = System.Drawing.Color.Honeydew;
-            this.guna2ComboBox1.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(244, 115);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.TabIndex = 2;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.javaVersion.AutoRoundedCorners = true;
+            this.javaVersion.BackColor = System.Drawing.Color.Transparent;
+            this.javaVersion.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.javaVersion.BorderRadius = 17;
+            this.javaVersion.BorderThickness = 0;
+            this.javaVersion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.javaVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.javaVersion.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.javaVersion.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
+            this.javaVersion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
+            this.javaVersion.FocusedState.Parent = this.javaVersion;
+            this.javaVersion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.javaVersion.ForeColor = System.Drawing.Color.Lime;
+            this.javaVersion.HoverState.Parent = this.javaVersion;
+            this.javaVersion.ItemHeight = 30;
+            this.javaVersion.Items.AddRange(new object[] {"1.8", "1.8+"});
+            this.javaVersion.ItemsAppearance.BackColor = System.Drawing.Color.Honeydew;
+            this.javaVersion.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            this.javaVersion.ItemsAppearance.Parent = this.javaVersion;
+            this.javaVersion.Location = new System.Drawing.Point(244, 115);
+            this.javaVersion.Name = "javaVersion";
+            this.javaVersion.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.javaVersion.ShadowDecoration.Parent = this.javaVersion;
+            this.javaVersion.Size = new System.Drawing.Size(140, 36);
+            this.javaVersion.TabIndex = 2;
+            this.javaVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // guna2Button1
             // 
@@ -384,6 +386,15 @@ namespace PackConverter
             this.@from.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.@from.SelectedIndexChanged += new System.EventHandler(this.from_SelectedIndexChanged);
             // 
+            // homepnl
+            // 
+            this.homepnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
+            this.homepnl.Location = new System.Drawing.Point(0, 0);
+            this.homepnl.Name = "homepnl";
+            this.homepnl.ShadowDecoration.Parent = this.homepnl;
+            this.homepnl.Size = new System.Drawing.Size(622, 327);
+            this.homepnl.TabIndex = 7;
+            // 
             // UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,9 +419,15 @@ namespace PackConverter
             this.ResumeLayout(false);
         }
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+
+        private Guna.UI2.WinForms.Guna2ComboBox javaVersion;
+
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
 
         #endregion
 

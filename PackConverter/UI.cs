@@ -21,6 +21,7 @@ using Newtonsoft.Json;
 using TurtleRPC;
 using Button = DiscordRPC.Button;
 using PackConverter;
+using PackConverter;
 
 namespace PackConverter
 {
@@ -29,9 +30,11 @@ namespace PackConverter
 
         public string From;
         public string To;
-        public string javaVersion;
+        public string JavaVersion;
         public OpenFileDialog zipPath;
-        private object instance;
+        public object instance;
+
+        public Config config;
 
             public UI()
         {
@@ -97,6 +100,9 @@ namespace PackConverter
             homebtn.Checked = false;
             changelogbtn.Checked = false;
 
+            @from.Text = "Bedrock";
+            @javaVersion.Text = "1.8";
+
             Mods.Client.SetPresence(new RichPresence()
             {
                 Timestamps = Timestamps.Now,
@@ -144,16 +150,15 @@ namespace PackConverter
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.From = from.SelectedText.GetNullOrString();
+            From = from.SelectedItem.ToString();
 
             string to;
 
-            switch (this.From)
+            switch (From)
             {
                 case "Bedrock":
                     to = "Java";
                     break;
-
                 case "Java":
                     to = "Bedrock";
                     break;
@@ -162,8 +167,23 @@ namespace PackConverter
                     to = "Bedrock";
                     break;
 
-
             }
+            
+            if (JavaVersion.ToString() is null)
+            {
+                MessageBox.Show("Error", "You didn't choose which file to convert!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                JavaVersion = javaVersion.SelectedItem.ToString();
+
+
+                config = new Config(From, to, JavaVersion, zipPath.FileName);
+                var lmfao = config.compress();
+
+                MessageBox.Show(lmfao, "epic", MessageBoxButtons.OK);
+            }
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -178,37 +198,46 @@ namespace PackConverter
                     RestoreDirectory = true
                 };
 
-                this.zipPath.ShowDialog();
+                if (this.zipPath.ShowDialog() == DialogResult.OK)
+                {
 
-
+                        MessageBox.Show("Successfully stored which file to convert. You can now safely convert.", "Success!", MessageBoxButtons.OK);
+                    }
+                }
             }
-        }
+         }
 
     namespace PackConverter
     {
         public class Config
         {
-            private string from;
-            private string to;
-            private string javaVersion;
-            private string zipPath;
+            public string from;
+            public string to;
+            public string javaVersion;
+            public string zipPath;
 
-            public Config(string from, string to, string javaVersion, string zipPath)
+            public Config(string from1, string to1, string javaVersion1, string zipPath1)
 
             {
 
-                this.from = from;
-                this.to = to;
-                this.javaVersion = javaVersion;
-                this.zipPath = zipPath;
+                this.from = from1;
+                this.to = to1;
+                this.javaVersion = javaVersion1;
+                this.zipPath = zipPath1;
 
             }
 
-            public object compress()
+            public string compress()
             {
-                object e = JsonConvert.SerializeObject(this);
+                string e = JsonConvert.SerializeObject(this);
+                
+                using (StreamWriter sw = new StreamWriter("config.json"))
+                {
+                    sw.WriteLineAsync(e);
+                }
+
                 return e;
+
             }
         }
     }
-}
