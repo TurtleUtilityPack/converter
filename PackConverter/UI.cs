@@ -66,7 +66,7 @@ namespace PackConverter
             settingsbtn.Checked = false;
 
 
-            if(zipPath != null & From1 != null & To != null & JavaVersion != null & zipPath != null)
+            if(zipPath != null & From1 != null & JavaVersion != null)
             {
                 homepnltxt.Text = "Your current settings are set up.";
             }
@@ -125,6 +125,7 @@ namespace PackConverter
         private void closebtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            Mods.Client.Dispose();
         }
 
         private void minibtn_Click(object sender, EventArgs e)
