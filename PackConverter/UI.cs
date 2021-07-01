@@ -27,7 +27,7 @@ namespace PackConverter
     public partial class UI : Form
     {
 
-        public string From;
+        public string From1;
         public string To;
         public string JavaVersion;
         public OpenFileDialog zipPath;
@@ -99,7 +99,7 @@ namespace PackConverter
             homebtn.Checked = false;
             changelogbtn.Checked = false;
 
-            @from.Text = "Bedrock";
+            @from1.Text = "Bedrock";
             @javaVersion.Text = "1.8";
 
             Mods.Client.SetPresence(new RichPresence()
@@ -149,11 +149,11 @@ namespace PackConverter
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            From = from.SelectedItem.ToString();
+            From1 = from1.SelectedItem.ToString();
 
             string to;
 
-            switch (From)
+            switch (From1)
             {
                 case "Bedrock":
                     to = "Java";
@@ -168,7 +168,7 @@ namespace PackConverter
 
             }
             
-            if (JavaVersion.ToString() is null)
+            if (zipPath.FileName is null)
             {
                 MessageBox.Show("Error", "You didn't choose which file to convert!", MessageBoxButtons.OK);
             }
@@ -177,7 +177,7 @@ namespace PackConverter
                 JavaVersion = javaVersion.SelectedItem.ToString();
 
 
-                config = new Config(From, to, JavaVersion, zipPath.FileName);
+                config = new Config(From1, to, JavaVersion, zipPath.FileName);
                 var lmfao = config.compress();
 
                 MessageBox.Show(lmfao, "epic", MessageBoxButtons.OK);
@@ -203,7 +203,12 @@ namespace PackConverter
                         MessageBox.Show("Successfully stored which file to convert. You can now safely convert.", "Success!", MessageBoxButtons.OK);
                     }
                 }
-            }
+
+        private void javaVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
          }
 
     namespace PackConverter
