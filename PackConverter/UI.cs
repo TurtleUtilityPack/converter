@@ -21,7 +21,6 @@ using Newtonsoft.Json;
 using TurtleRPC;
 using Button = DiscordRPC.Button;
 using PackConverter;
-using PackConverter;
 
 namespace PackConverter
 {

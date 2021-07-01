@@ -388,12 +388,11 @@ namespace PackConverter
             // 
             // homepnl
             // 
-            this.homepnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
-            this.homepnl.Location = new System.Drawing.Point(0, 0);
+            this.homepnl.Location = new System.Drawing.Point(3, 27);
             this.homepnl.Name = "homepnl";
             this.homepnl.ShadowDecoration.Parent = this.homepnl;
             this.homepnl.Size = new System.Drawing.Size(622, 327);
-            this.homepnl.TabIndex = 7;
+            this.homepnl.TabIndex = 4;
             // 
             // UI
             // 
@@ -401,7 +400,7 @@ namespace PackConverter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(881, 468);
+            this.ClientSize = new System.Drawing.Size(883, 505);
             this.Controls.Add(this.navpnl);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.settingspnl);
@@ -419,10 +418,10 @@ namespace PackConverter
             this.ResumeLayout(false);
         }
 
+        private Guna.UI2.WinForms.Guna2Panel homepnl;
+
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
 
         private Guna.UI2.WinForms.Guna2ComboBox javaVersion;
