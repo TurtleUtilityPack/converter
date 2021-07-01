@@ -43,10 +43,10 @@ namespace PackConverter
             this.navpnl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.settingspnl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.@from = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.guna2PictureBox1)).BeginInit();
             this.navpnl.SuspendLayout();
@@ -275,6 +275,60 @@ namespace PackConverter
             this.settingspnl.Size = new System.Drawing.Size(622, 327);
             this.settingspnl.TabIndex = 6;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button2.BorderRadius = 17;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (169)))), ((int) (((byte) (169)))), ((int) (((byte) (169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (141)))), ((int) (((byte) (141)))), ((int) (((byte) (141)))));
+            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(441, 115);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(161, 36);
+            this.guna2Button2.TabIndex = 3;
+            this.guna2Button2.Text = "Select File";
+            this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.AutoRoundedCorners = true;
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.guna2ComboBox1.BorderRadius = 17;
+            this.guna2ComboBox1.BorderThickness = 0;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
+            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Lime;
+            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {"1.8", "1.8+"});
+            this.guna2ComboBox1.ItemsAppearance.BackColor = System.Drawing.Color.Honeydew;
+            this.guna2ComboBox1.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
+            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(244, 115);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
+            this.guna2ComboBox1.TabIndex = 2;
+            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
@@ -329,60 +383,6 @@ namespace PackConverter
             this.@from.TabIndex = 0;
             this.@from.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.@from.SelectedIndexChanged += new System.EventHandler(this.from_SelectedIndexChanged);
-            // 
-            // guna2ComboBox1
-            // 
-            this.guna2ComboBox1.AutoRoundedCorners = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.guna2ComboBox1.BorderRadius = 17;
-            this.guna2ComboBox1.BorderThickness = 0;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (94)))), ((int) (((byte) (148)))), ((int) (((byte) (255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.Lime;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {"1.8", "1.8+"});
-            this.guna2ComboBox1.ItemsAppearance.BackColor = System.Drawing.Color.Honeydew;
-            this.guna2ComboBox1.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (192)))), ((int) (((byte) (192)))));
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(244, 115);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox1.TabIndex = 2;
-            this.guna2ComboBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderRadius = 17;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (169)))), ((int) (((byte) (169)))), ((int) (((byte) (169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (141)))), ((int) (((byte) (141)))), ((int) (((byte) (141)))));
-            this.guna2Button2.DisabledState.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(441, 115);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(161, 36);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "Select File";
-            this.guna2Button2.UseTransparentBackground = true;
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // UI
             // 

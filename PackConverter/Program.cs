@@ -17,7 +17,7 @@ namespace PackConverter
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PackConverter.UI());
+            Application.Run(new UI());
 
         }
     }

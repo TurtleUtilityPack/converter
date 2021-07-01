@@ -8,7 +8,10 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,8 +31,9 @@ namespace PackConverter
         public string To;
         public string javaVersion;
         public OpenFileDialog zipPath;
+        private object instance;
 
-        public UI()
+            public UI()
         {
             WebClient Converter = new WebClient();
             InitializeComponent();
@@ -37,12 +41,21 @@ namespace PackConverter
             Directory.CreateDirectory(@"c:\Turtle/Converted_Packs");
             Directory.CreateDirectory(@"c:\Turtle/Converter");
 
+            this.instance = this;
+
+
+
             //Converter.DownloadFile("https://github.com/ZKiev/TurtleFiles/blob/master/Converter.php", @"C:\Turtle/Converter/Converter.php");
+        }
+
+        public object getInstance()
+        {
+            return this.instance;
         }
 
         private void homebtn_Click(object sender, EventArgs e)
         {
-          
+
             settingspnl.Visible = false;
 
             homebtn.Checked = true;
@@ -53,8 +66,8 @@ namespace PackConverter
             {
                 Timestamps = Timestamps.Now,
                 Details = "In home",
-                Assets = new Assets() { LargeImageKey = "ico" },
-                Buttons = new Button[] { new Button { Label = "Turtle Discord", Url = "https://discord.gg/turtleclient" }, }
+                Assets = new Assets() {LargeImageKey = "ico"},
+                Buttons = new Button[] {new Button {Label = "Turtle Discord", Url = "https://discord.gg/turtleclient"},}
             });
 
         }
@@ -69,15 +82,15 @@ namespace PackConverter
             {
                 Timestamps = Timestamps.Now,
                 Details = "Looking at changelogs",
-                Assets = new Assets() { LargeImageKey = "ico" },
-                Buttons = new Button[] { new Button { Label = "Turtle Discord", Url = "https://discord.gg/turtleclient" }, }
+                Assets = new Assets() {LargeImageKey = "ico"},
+                Buttons = new Button[] {new Button {Label = "Turtle Discord", Url = "https://discord.gg/turtleclient"},}
             });
 
         }
 
         private void settingsbtn_Click(object sender, EventArgs e)
         {
-           
+
             settingspnl.Visible = true;
 
             settingsbtn.Checked = true;
@@ -88,8 +101,8 @@ namespace PackConverter
             {
                 Timestamps = Timestamps.Now,
                 Details = "Configuring settings",
-                Assets = new Assets() { LargeImageKey = "ico" },
-                Buttons = new Button[] { new Button { Label = "Turtle Discord", Url = "https://discord.gg/turtleclient" }, }
+                Assets = new Assets() {LargeImageKey = "ico"},
+                Buttons = new Button[] {new Button {Label = "Turtle Discord", Url = "https://discord.gg/turtleclient"},}
             });
 
         }
@@ -149,52 +162,53 @@ namespace PackConverter
                     to = "Bedrock";
                     break;
 
-            }
 
-            var config = new PackConverter.Config(this.From, to);
-            
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
-        {
-            this.zipPath = new OpenFileDialog();
-            this.zipPath.Title = "Select Zip File";
-            this.zipPath.Filter = "zip files (*.zip)|*.zip";
-            this.zipPath.DefaultExt = "zip";
-            this.zipPath.FilterIndex = 2;
-            this.zipPath.RestoreDirectory = true;
+            {
+                
+                this.zipPath = new OpenFileDialog()
+                {
+                    Title = "Select Zip File",
+                    Filter = "zip files (*.zip)|*.zip",
+                    DefaultExt = "zip",
+                    FilterIndex = 2,
+                    RestoreDirectory = true
+                };
+
+                this.zipPath.ShowDialog();
 
 
-
-
+            }
         }
-    }
-}
 
-namespace PackConverter
-{
-    public class Config
+    namespace PackConverter
     {
-        private string from;
-        private string to;
-        private string javaVersion;
-        private string zipPath;
-
-        public Config(string from, string to, string javaVersion, string zipPath)
-
+        public class Config
         {
+            private string from;
+            private string to;
+            private string javaVersion;
+            private string zipPath;
 
-            this.from = from;
-            this.to = to;
-            this.javaVersion = javaVersion;
-            this.zipPath = zipPath;
+            public Config(string from, string to, string javaVersion, string zipPath)
 
-        }
+            {
 
-        public object compress()
-        {
-            object e = JsonConvert.SerializeObject(this);
-            return e;
+                this.from = from;
+                this.to = to;
+                this.javaVersion = javaVersion;
+                this.zipPath = zipPath;
+
+            }
+
+            public object compress()
+            {
+                object e = JsonConvert.SerializeObject(this);
+                return e;
+            }
         }
     }
 }
