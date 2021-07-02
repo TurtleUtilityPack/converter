@@ -120,6 +120,15 @@ namespace PackConverter
         private void UI_Load(object sender, EventArgs e)
         {
             Mods.StartRPC();
+                        
+            if (File.Exists("config.json"))
+            {
+                StreamReader sr = new StreamReader("config.json");
+                string config = sr.ReadToEndAsync().Result;
+                Config h = JsonConvert.DeserializeObject<Config>(config);
+                this.from1.Text = h.from;
+                this.javaVersion.Text = h.javaVersion;
+            }
         }
 
         private void closebtn_Click(object sender, EventArgs e)
@@ -212,14 +221,24 @@ namespace PackConverter
 
         private void javaVersion_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void homepnltxt_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
-        
+
+        private void convertbtn_Click_1(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        private void from1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.from1.SelectedText = e.ToString();
+        }
     }
          }
 

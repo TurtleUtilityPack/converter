@@ -1,4 +1,8 @@
 ﻿
+using System;
+using System.IO;
+using Newtonsoft.Json;
+
 namespace PackConverter
 {
     partial class UI
@@ -263,7 +267,6 @@ namespace PackConverter
             // 
             // guna2BorderlessForm1
             // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
             this.guna2BorderlessForm1.AnimationInterval = 1050;
             this.guna2BorderlessForm1.AnimationType = Guna.UI2.WinForms.Guna2BorderlessForm.AnimateWindowType.AW_CENTER;
             this.guna2BorderlessForm1.BorderRadius = 20;
@@ -276,11 +279,12 @@ namespace PackConverter
             this.settingspnl.Controls.Add(this.guna2Button2);
             this.settingspnl.Controls.Add(this.javaVersion);
             this.settingspnl.Controls.Add(this.guna2Button1);
-            this.settingspnl.Location = new System.Drawing.Point(251, 162);
+            this.settingspnl.Location = new System.Drawing.Point(249, 166);
             this.settingspnl.Name = "settingspnl";
             this.settingspnl.ShadowDecoration.Parent = this.settingspnl;
             this.settingspnl.Size = new System.Drawing.Size(622, 327);
             this.settingspnl.TabIndex = 6;
+            this.settingspnl.Visible = false;
             // 
             // from1
             // 
@@ -310,6 +314,7 @@ namespace PackConverter
             this.from1.Size = new System.Drawing.Size(140, 36);
             this.from1.TabIndex = 4;
             this.from1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.from1.SelectedIndexChanged += new System.EventHandler(this.from1_SelectedIndexChanged);
             // 
             // guna2Button2
             // 
@@ -398,7 +403,7 @@ namespace PackConverter
             this.homepnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (150)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.homepnl.Controls.Add(this.convertbtn);
             this.homepnl.Controls.Add(this.homepnltxt);
-            this.homepnl.Location = new System.Drawing.Point(251, 162);
+            this.homepnl.Location = new System.Drawing.Point(249, 166);
             this.homepnl.Name = "homepnl";
             this.homepnl.ShadowDecoration.Parent = this.homepnl;
             this.homepnl.Size = new System.Drawing.Size(622, 327);
@@ -432,6 +437,7 @@ namespace PackConverter
             this.convertbtn.Size = new System.Drawing.Size(150, 31);
             this.convertbtn.TabIndex = 4;
             this.convertbtn.Text = "Convert";
+            this.convertbtn.Click += new System.EventHandler(this.convertbtn_Click_1);
             // 
             // homepnltxt
             // 
