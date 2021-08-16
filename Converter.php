@@ -247,23 +247,28 @@ class Converter
 
                     $languagizedTexture = $this->languagize($texture);
 
+                    if($languagizedTexture->type === "custom") {
 
-                    if(strpos($languagizedTexture->bedrock, "{color}")) {
-
-                        foreach($this->colors as $color)
-                        {
-                            $bedrock = str_replace("{color}", $color, $languagizedTexture->bedrock);
-                            $java = str_replace("{color}", $color, $languagizedTexture->java);
-
-                            copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png");
-
-                        }
-
+                        $this->register_path($languagizedTexture->non_equals);
 
                     } else {
 
-                        copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                        if (strpos($languagizedTexture->bedrock, "{color}")) {
 
+                            foreach ($this->colors as $color) {
+                                $bedrock = str_replace("{color}", $color, $languagizedTexture->bedrock);
+                                $java = str_replace("{color}", $color, $languagizedTexture->java);
+
+                                copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png");
+
+                            }
+
+
+                        } else {
+
+                            copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+
+                        }
                     }
                 }
 
@@ -303,6 +308,10 @@ class Converter
         return substr($sub,0, strpos ($sub, $to));
     }
 
+    /**
+     * @param $number
+     * @return false|mixed
+     */
     function numericCheck($number) {
 
         if(is_numeric(trim($number)))
@@ -316,6 +325,19 @@ class Converter
         }
 
         return false;
+
+    }
+
+    /**
+     * @param string $full
+     */
+    public function register_path(string $full) {
+
+        $explode = explode(" = ", $full);
+
+        $this->registered_paths[$explode[0]] = [$explode[1], $explode[2]];
+
+        echo "\nSuccessfully registered $explode[0] file path.";
 
     }
 
