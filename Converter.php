@@ -248,8 +248,8 @@ class Converter
 
                     if($languagizedTexture->type === "custom") {
 
-                        $this->register_path($languagizedTexture->full);
-                        copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                        $custom = $this->register_path($languagizedTexture->full);
+                        copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
 
                     } else {
 
@@ -332,13 +332,15 @@ class Converter
     /**
      * @param string $full
      */
-    public function register_path(string $full) {
+    public function register_path(string $full): string {
 
         $explode = explode(" = ", $full);
 
         $this->registered_paths[$explode[0]] = ["bedrock" => $explode[1], "java" => $explode[2]];
 
         echo "\nSuccessfully registered $explode[0] file path.\n";
+
+        return $explode[0];
 
     }
 
