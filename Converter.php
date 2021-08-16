@@ -336,7 +336,7 @@ class Converter
 
         $explode = explode(" = ", $full);
 
-        $this->registered_paths[$explode[0]] = [$explode[1], $explode[2]];
+        $this->registered_paths[$explode[0]] = ["bedrock" => $explode[1], "java" => $explode[2]];
 
         echo "\nSuccessfully registered $explode[0] file path.\n";
 
