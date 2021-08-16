@@ -1,4 +1,4 @@
--<?php
+<?php
 
 namespace TurtleClient;
 
@@ -37,18 +37,60 @@ class Converter
      */
     public string $javaVersion;
 
+
+    /**
+     * @var array|string[]
+     * Colors that exist in Minecraft used for converting (Glass, etc.)
+     */
+    public array $colors = ["red", "blue"];
+
+    /**
+     * @var array
+     * The textures in "textures" folder in bedrock that can be converted.
+     */
+    public array $textures_bedrock = [];
+
+    /**
+     * @var string
+     */
+    public string $items_path_bedrock = "textures/items";
+
+    /**
+     * @var string
+     */
+    public string $items_path_java = "assets/minecraft/textures/item";
+
+    public function __construct()
+    {
+
+        if(is_readable("textures.txt"))
+        {
+
+            $contents = file_get_contents("textures.txt");
+            $this->textures_bedrock = explode("\n", $contents);
+
+        }
+
+
+    }
+
     function config(): bool
     {
 
         if (is_writeable('config.json')) {
 
-            echo 'reading configs...';
-            $config = json_decode(fopen("config.json", 'w+'));
+            echo 'Reading config...';
+
+            $h = fopen("config.json", 'r');
+            $config = json_decode(fread($h, 10000));
 
             $from = $config->from;
             $to = $config->to;
             $javaVersion = $config->javaVersion;
             $zipPath = $config->zipPath;
+
+            $from = strtolower($from);
+            $javaVersion = strtolower($javaVersion);
 
 
             switch ($from) {
@@ -86,7 +128,7 @@ class Converter
 
         } else {
 
-            echo "\nconfig not readable! Please check if you have the config.json file. We will build it for you.";
+            echo "\nconfig.json not readable! Please check if you have the config.json file. We will build it for you.";
             $config = new Config('bedrock', 'java', 'pack.zip', '1.8');
             $file = fopen('config.json', 'w+');
             fwrite($file, json_encode($config, JSON_PRETTY_PRINT));
@@ -121,17 +163,63 @@ class Converter
 
             $folders = scandir($converted_packs);
 
+            $done = false;
+
+            foreach($folders as $name){
+
+                if(!$done) {
+                    if (is_numeric($name)) {
+
+                        $done = true;
+                        $folder = $name;
+                    }
+                }
+            }
+
             if(count($folders) > 1)
             {
 
                 echo "\nMore than 1 folder detected! Choose one of these (Type their number value):\n";
                 print_r($folders);
 
+                $handle = fopen ("php://stdin","r");
+                $line = fgets($handle);
+
+                if(is_numeric($this->numericCheck(trim($line))))
+
+                {
+                    $line = trim($line);
+                    echo "\nGreat! Chosen which folder to convert. ($line)\n";
+                    $folder = $folders[$line];
+
+                }
+
+                fclose($handle);
+
             }
+
+            $converter_folder_name = $converted_packs . DIRECTORY_SEPARATOR . $folder;
+            $converter_texture_folder = $converter_folder_name . DIRECTORY_SEPARATOR . "textures";
 
 
 
         }
+    }
+
+    function numericCheck($number) {
+
+        if(is_numeric(trim($number)))
+
+            return $number;
+
+        else {
+
+            echo "Number not numeric. Try again.\n";
+
+        }
+
+        return false;
+
     }
 
 }
@@ -203,8 +291,8 @@ class Config
     }
 }
 
- $converter = new Converter();
- $converter->convert();
+$converter = new Converter();
+$converter->convert();
 
 
 
