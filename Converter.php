@@ -394,10 +394,8 @@ class Config
         }
 
         switch ($javaVersion) {
-            case '1.8':
-                $this->javaVersion = $javaVersion;
-                break;
             case '1.8+':
+            case '1.8':
                 $this->javaVersion = $javaVersion;
                 break;
             default:
