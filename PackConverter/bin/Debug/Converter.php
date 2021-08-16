@@ -43,12 +43,19 @@ class Converter
         if (is_writeable('config.json')) {
 
             echo 'reading configs...';
-            $config = json_decode(fopen("config.json", 'w+'));
+            $h = fopen("config.json", "r");
+
+            $config = json_decode(fread($h, 100000));
 
             $from = $config->from;
             $to = $config->to;
             $javaVersion = $config->javaVersion;
             $zipPath = $config->zipPath;
+
+            $from = strtolower($from);
+            $to = strtolower($to);
+            $javaVersion = strtolower($javaVersion);
+
 
 
             switch ($from) {
@@ -86,7 +93,7 @@ class Converter
 
         } else {
 
-            echo "\nconfig not readable! Please check if you have the config.json file. We will build it for you.";
+            echo "\nConfig not readable! Please check if you have the config.json file. We will build it for you.";
             $config = new Config('bedrock', 'java', 'pack.zip', '1.8');
             $file = fopen('config.json', 'w+');
             fwrite($file, json_encode($config, JSON_PRETTY_PRINT));
@@ -115,6 +122,10 @@ class Converter
             $zip = new \ZipArchive();
             $zip->open($this->zipPath);
             $zip->extractTo("C:/Turtle/Converted_Packs");
+
+        } else {
+
+            echo "\nSomething went wrong with your config!";
 
         }
     }

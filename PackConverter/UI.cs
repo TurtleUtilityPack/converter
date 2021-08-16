@@ -231,7 +231,9 @@ namespace PackConverter
 
         private void convertbtn_Click_1(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+
+            Process.Start("run.bat");
+
         }
 
 
