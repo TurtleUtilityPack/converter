@@ -1,4 +1,4 @@
-<?php
+-<?php
 
 namespace TurtleClient;
 
@@ -119,7 +119,7 @@ class Converter
         }
     }
 
- }
+}
 
 class Config
 {
@@ -190,7 +190,6 @@ class Config
 
 $converter = new Converter();
 $converter->convert();
-
 
 
 
