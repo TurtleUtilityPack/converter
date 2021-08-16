@@ -112,9 +112,24 @@ class Converter
 
         if($config){
 
+            $converted_packs = "C:/Turtle/Converted_Packs";
+
             $zip = new \ZipArchive();
             $zip->open($this->zipPath);
-            $zip->extractTo("C:/Turtle/Converted_Packs");
+            $zip->extractTo($converted_packs);
+            $zip->close();
+
+            $folders = scandir($converted_packs);
+
+            if(count($folders) > 1)
+            {
+
+                echo "\nMore than 1 folder detected! Choose one of these (Type their number value):\n";
+                print_r($folders);
+
+            }
+
+
 
         }
     }
@@ -188,8 +203,8 @@ class Config
     }
 }
 
-$converter = new Converter();
-$converter->convert();
+ $converter = new Converter();
+ $converter->convert();
 
 
 
