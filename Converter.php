@@ -249,9 +249,11 @@ class Converter
 
                     if($languagizedTexture->type === "custom") {
 
-                        $this->register_path($languagizedTexture->non_equals);
+                        $this->register_path($languagizedTexture->full);
+                        copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
 
                     } else {
+
 
                         if (strpos($languagizedTexture->bedrock, "{color}")) {
 
@@ -337,7 +339,7 @@ class Converter
 
         $this->registered_paths[$explode[0]] = [$explode[1], $explode[2]];
 
-        echo "\nSuccessfully registered $explode[0] file path.";
+        echo "\nSuccessfully registered $explode[0] file path.\n";
 
     }
 
