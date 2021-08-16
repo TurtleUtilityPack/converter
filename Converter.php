@@ -42,7 +42,7 @@ class Converter
      * @var array|string[]
      * Colors that exist in Minecraft used for converting (Glass, etc.)
      */
-    public array $colors = ["red", "blue"];
+    public array $colors = ["red", "blue", "white", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "silver", "cyan", "purple", "blue", "brown", "green", "red", "black"];
 
     /**
      * @var array
