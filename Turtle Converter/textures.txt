@@ -1,0 +1,5 @@
+[block]glass_{color} = {color}_stained_glass
+[item]wood_sword = wooden_sword
+[item]apple = apple
+[item]gold_sword = golden_sword
+[custom]popbob = textures/popbob = asset/minecraft/textures/popbob
