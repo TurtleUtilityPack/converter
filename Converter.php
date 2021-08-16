@@ -240,7 +240,6 @@ class Converter
 
                 $textures = $this->textures_bedrock;
 
-                var_dump($textures);
 
                 foreach($textures as $texture)
                 {
