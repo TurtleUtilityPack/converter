@@ -9,6 +9,14 @@ use function is_writeable;
 use function json_decode;
 use function json_encode;
 
+/*
+ * Todo List:
+ *
+ * - Actually rename, and move files.
+ * - Make a way for customizeable file path conversions.
+ * - Think about what I didn't add here.
+ *
+ */
 
 class Converter
 {
@@ -62,6 +70,7 @@ class Converter
 
     public function __construct()
     {
+
 
         if(is_readable("textures.txt"))
         {
