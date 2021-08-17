@@ -2,6 +2,9 @@
 
 namespace TurtleClient;
 
+use FilesystemIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use function fopen;
 use function fwrite;
 use function fclose;
@@ -214,7 +217,7 @@ class Converter
 
             $converter_folder_name = $converted_packs . DIRECTORY_SEPARATOR . $folder;
             $converter_texture_folder = $converter_folder_name . DIRECTORY_SEPARATOR . "textures";
-            $folder_converted = $converted_packs . DIRECTORY_SEPARATOR . $folder . "-Converted";
+            $folder_converted = $converter_folder_name. "-Converted";
 
             @mkdir($folder_converted);
 
@@ -232,11 +235,16 @@ class Converter
                 fwrite($mcmetaHandle, json_encode($mcmeta, JSON_PRETTY_PRINT));
                 fclose($mcmetaHandle);
 
-                @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets");
-                @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft");
-                @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft" . DIRECTORY_SEPARATOR . "textures");
-                @mkdir($folder_converted . DIRECTORY_SEPARATOR . $this->items_path_java);
-                @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft" . DIRECTORY_SEPARATOR . "textures" . DIRECTORY_SEPARATOR . "block");
+
+                 @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets");
+                 @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft");
+                 @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft" . DIRECTORY_SEPARATOR . "textures");
+                 @mkdir($folder_converted . DIRECTORY_SEPARATOR . $this->items_path_java);
+                 @mkdir($folder_converted . DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "minecraft" . DIRECTORY_SEPARATOR . "textures" . DIRECTORY_SEPARATOR . "block");
+
+
+                $this->recurse_copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths["item"]["bedrock"], $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths["item"]["java"]);
+                $this->recurse_copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths["block"]["bedrock"], $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths["block"]["java"]);
 
                 $textures = $this->textures_bedrock;
 
@@ -249,7 +257,10 @@ class Converter
                     if($languagizedTexture->type === "custom") {
 
                         $custom = $this->register_path($languagizedTexture->full);
-                        copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                        if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png"))
+                            copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                        else
+                            echo "\nFailed to copy file $languagizedTexture->bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png\n\n";
 
                     } else {
 
@@ -260,24 +271,64 @@ class Converter
                                 $bedrock = str_replace("{color}", $color, $languagizedTexture->bedrock);
                                 $java = str_replace("{color}", $color, $languagizedTexture->java);
 
-                                copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png");
+                                if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png"))
+                                    copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png");
+                                else
+                                    echo "\nFailed to copy file $bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png\n\n";
 
                             }
 
 
                         } else {
 
-                            copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                            if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png"))
+                                copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                            else
+                                echo "\nFailed to copy file $languagizedTexture->bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png\n\n";
 
                         }
                     }
                 }
 
+                $this->rmdir_recursive($converter_folder_name);
+
+            } elseif ($this->from == 'java')
+            {
+                echo "\nWe don't support conversion from java -> bedrock yet. Check our discord constantly for updates.\n\n";
             }
 
 
 
         }
+
+
+
+    }
+
+    function rmdir_recursive($dir) {
+        $it = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
+        $it = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
+        foreach($it as $file) {
+            if ($file->isDir()) rmdir($file->getPathname());
+            else unlink($file->getPathname());
+        }
+        rmdir($dir);
+    }
+
+    function recurse_copy($src,$dst) {
+        $dir = opendir($src);
+        @mkdir($dst);
+        while(false !== ( $file = readdir($dir)) ) {
+            if (( $file != '.' ) && ( $file != '..' )) {
+                if ( is_dir($src . '/' . $file) ) {
+                    $this->recurse_copy($src . '/' . $file, $dst . '/' . $file);
+                }
+                else {
+                    copy($src . '/' . $file,$dst . '/' . $file);
+                }
+            }
+        }
+        closedir($dir);
     }
 
     function languagize($texture): \stdClass {
@@ -411,8 +462,8 @@ class Config
     }
 }
 
-$converter = new Converter();
-$converter->convert();
+ $converter = new Converter();
+ $converter->convert();
 
 
 
