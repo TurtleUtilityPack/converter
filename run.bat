@@ -2,11 +2,12 @@
 TITLE Turtle Converter
 echo Initializing converter....
 
-if exist bin\php\php.exe (
-set PHPRC=""
-set PHP_BINARY=bin\php\php
-%PHP_BINARY% Converter.php
+if exist php8\php.exe (
+
+php8\php.exe Converter.php
+
+
 ) else (
-echo Can't find PHP! Please download PHP8 Binaries and drop them (bin folder) where the .bat is located.
+echo Can't find PHP! Please download PHP8 Binaries for Windows and drop the bin folder where the .bat is located.
 )
 pause
