@@ -257,17 +257,7 @@ class Converter
 
                     if($languagizedTexture->type === "custom") {
 
-                        $custom = $this->register_path($languagizedTexture->full);
-
-                        if(file_exists($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png")) {
-
-                            rename($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
-                            echo "\nConverting " . $languagizedTexture->bedrock . ".png\n";
-
-
-                        }
-                        else
-                            echo "\nFailed to convert file $languagizedTexture->bedrock. It doesn't exist. Full path used: " . $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png\n\n";
+                        $this->register_path($languagizedTexture->full);
 
                     } elseif ($languagizedTexture->type === "custom-var") {
 
@@ -278,12 +268,12 @@ class Converter
 
                         if (strpos($languagizedTexture->bedrock, "{") && strpos($languagizedTexture->bedrock, "}")) {
 
-                            if(array_key_exists($type = $this->getStringBetween($languagizedTexture->bedrock, "{", "}"), $this->variables)) {
+                            if(array_key_exists($type = $this->getStringBetween($languagizedTexture->bedrock, "{", "}"), $this->variables) and array_key_exists($typeJava = $this->getStringBetween($languagizedTexture->java, "{", "}"), $this->variables)) {
 
-                                foreach ($this->variables[$type] as $color) {
+                                foreach ($this->variables[$type] as $types) {
 
-                                    $bedrock = str_replace("{". $type . "}", $color, $languagizedTexture->bedrock);
-                                    $java = str_replace("{". $type . "}", $color, $languagizedTexture->java);
+                                    $bedrock = str_replace("{". $type . "}", $types, $languagizedTexture->bedrock);
+                                    $java = str_replace("{". $typeJava . "}", $types, $languagizedTexture->java);
 
                                     if (file_exists($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $bedrock . ".png")) {
 
@@ -430,9 +420,9 @@ class Converter
         $name = $explode[0];
         $array = $explode[1];
 
-        $this->registered_paths[$name] = explode(", ", $array);
+        $this->variables[$name] = explode(", ", $array);
 
-        echo "\nSuccessfully registered $explode[0] file path.\n";
+        echo "\nSuccessfully registered $explode[0] variable.\n";
 
         return $explode[0];
 
