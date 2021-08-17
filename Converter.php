@@ -258,7 +258,7 @@ class Converter
 
                         $custom = $this->register_path($languagizedTexture->full);
                         if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png"))
-                            copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                            rename($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png");
                         else
                             echo "\nFailed to copy file $languagizedTexture->bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$custom]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png\n\n";
 
@@ -272,7 +272,7 @@ class Converter
                                 $java = str_replace("{color}", $color, $languagizedTexture->java);
 
                                 if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png"))
-                                    copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png");
+                                    rename($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $java . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png");
                                 else
                                     echo "\nFailed to copy file $bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $bedrock . ".png\n\n";
 
@@ -282,7 +282,7 @@ class Converter
                         } else {
 
                             if(file_exists($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png"))
-                                copy($converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png");
+                                rename($folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["java"] . DIRECTORY_SEPARATOR . $languagizedTexture->java . ".png", $folder_converted . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png");
                             else
                                 echo "\nFailed to copy file $languagizedTexture->bedrock. It doesn't exist. Full path used: " . $converter_folder_name . DIRECTORY_SEPARATOR . $this->registered_paths[$languagizedTexture->type]["bedrock"] . DIRECTORY_SEPARATOR . $languagizedTexture->bedrock . ".png\n\n";
 
