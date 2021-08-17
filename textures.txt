@@ -1,0 +1,7 @@
+[item]glass_{color} = {color}_stained_glass
+[item]wood_sword = wooden_sword
+[item]gold_sword = golden_sword
+[block]door_{type}_upper = {type}_door_top
+[custom]armor = textures/models/armor = assets/minecraft/textures/models/armor
+[armor]diamond_1 = diamond_layer_1
+[custom-var]wood = acacia, dark_oak, oak
